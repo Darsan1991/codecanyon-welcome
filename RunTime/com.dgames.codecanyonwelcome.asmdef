@@ -1,0 +1,16 @@
+{
+    "name": "com.dgames.codecanyonwelcome",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4dbdc2d013e5f4fb09350d95d07baf27"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
