@@ -261,7 +261,7 @@ namespace DGames.Welcome
         [InitializeOnLoadMethod]
         public static void OnOpenProject()
         {
-            Debug.Log(nameof(OnOpenProject) + ":" + ShowAtStart);
+            // Debug.Log(nameof(OnOpenProject) + ":" + ShowAtStart);
 
 
             EditorApplication.update += OnEditorApplicationUpdate;
