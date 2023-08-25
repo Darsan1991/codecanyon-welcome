@@ -14,8 +14,8 @@ namespace DGames.Welcome
 
         public static bool ShowAtStart
         {
-            get => EditorPrefs.GetBool(nameof(ShowAtStart), true);
-            set => EditorPrefs.SetBool(nameof(ShowAtStart), value);
+            get => !EditorPrefs.HasKey(nameof(WelcomeWindow)+nameof(ShowAtStart)) || EditorPrefs.GetBool(nameof(WelcomeWindow)+nameof(ShowAtStart), true);
+            set => EditorPrefs.SetBool(nameof(WelcomeWindow)+nameof(ShowAtStart), value);
         }
 
         [MenuItem("MyGames/Welcome &2",priority = -1)]
