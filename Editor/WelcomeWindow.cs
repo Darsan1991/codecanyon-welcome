@@ -176,6 +176,10 @@ namespace DGames.Welcome
 
         private void OpenUrl(string url, ActionType type)
         {
+
+            url = url.Replace('/', Path.DirectorySeparatorChar);
+            var dataPath = Application.dataPath.Replace('/', Path.DirectorySeparatorChar);
+            Debug.Log(Path.DirectorySeparatorChar + "," + Application.dataPath);
             switch (type)
             {
                 case ActionType.Web:
@@ -183,7 +187,7 @@ namespace DGames.Welcome
                     break;
                 case ActionType.File:
                     var baseUrl =
-                        $"{Application.dataPath.Substring(0, Application.dataPath.LastIndexOf(Path.DirectorySeparatorChar))}";
+                        $"{Application.dataPath.Substring(0, dataPath.LastIndexOf(Path.DirectorySeparatorChar))}";
                     EditorUtility.OpenWithDefaultApp($"{baseUrl}{Path.DirectorySeparatorChar}{url}");
                     break;
                 default:
